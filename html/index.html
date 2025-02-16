@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="">About Me</a></li>
+            <li><a href="">Skills & Technologies</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Professional Experience</a></li>
+            <li><a href="">Certifications</a></li>
+            <li><a href="">Technical Test</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="me">
+            <img class="img-porfolio" src="../img/programmer.jpg" alt="Profile">
+            <h3>I am Juan Yepes</h3>
+            <h3>Backend Developer</h3>
+            <span>If everything flows smoothly, it's because the backend is doing its job.</span>
+            <div class="social-reds">
+                <a href=""><img src="../img/gamil.png" alt="Gmail"></a>
+                <a href=""><img src="../img/linkedin.png" alt="LinkedIn Profile"></a>
+                <a href=""><img src="../img/instagram.png" alt="Instagram Profile"></a>
+            </div>
+        </div>
+    </header>
+
+    <article id="about-me">
+        <h1>About Me</h1>
+        <br>
+        <p>Hi, I am Juan Pablo Yepes Herrera, a Technologist in Analysis and Software Development from Colombia.
+            I am a developer who worked at Grupo ASD as an apprentice through SENA (National Learning Service),
+            a public institution in Colombia that provides technical education and training. During my time there,
+            I had the opportunity to collaborate on backend projects using Python and FastAPI.
+            Although my professional experience is just starting, I have a strong passion for API development and
+            solving complex problems.
+        </p>
+    </article>
+
+    <section>
+        <br>
+        <h1>Skills & Technologies</h1>
+        <div class="technologias">
+            <div class="row">
+                <div class="category">
+                    <h3>Frontend</h3>
+                    <div class="icons-container">
+                        <div class="icon">
+                            <img src="../img/html5.png" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="icon">
+                            <img src="../img/css-3.png" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="icon">
+                            <img src="../img/bootstrap.png" alt="Bootstrap">
+                            <span>BOOTSTRAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Backend</h3>
+                    <div class="icons-container">
+                        <div class="icon">
+                            <img src="../img/python.png" alt="Python">
+                            <span>PYTHON</span>
+                        </div>
+                        <div class="icon">
+                            <img src="../img/php.png" alt="PHP">
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="category">
+                    <h3>Frameworks</h3>
+                    <div class="icons-container">
+                        <div class="icon">
+                            <img src="../img/FastApi.jpg" alt="FastAPI">
+                            <span>FASTAPI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Tools</h3>
+                    <div class="icons-container">
+                        <div class="icon">
+                            <img src="../img/docker.png" alt="Docker">
+                            <span>DOCKER</span>
+                        </div>
+                        <div class="icon">
+                            <img src="../img/git.png" alt="Git">
+                            <span>GIT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="category">
+                    <h3>Database</h3>
+                    <div class="icons-container">
+                        <div class="icon">
+                            <img src="../img/mongo.png" alt="MongoDB">
+                            <span>MONGO-DB</span>
+                        </div>
+                        <div class="icon">
+                            <img src="../img/mysql.png" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h3>Learning</h3>
+                    <div class="icons-container">
+                        <div class="icon">
+                            <img src="../img/javascript.png" alt="JavaScript">
+                            <span>JAVASCRIPT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h2>Mis Proyectos</h2>
+        <br>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-card">
+                    <img src="" alt="Proyecto 1">
+                    <div class="project-info">
+                        <h3 class="technologies">BLOG</h3>
+                        <p class="technologies">Blog Application es una aplicación de blog desarrollada con FastAPI y
+                            MongoDB que permite a los usuarios registrarse, iniciar sesión, crear y gestionar
+                            publicaciones, y administrar su perfil personal.</p>
+                        <p class="technologies">Backend: FastAPI, MongoDB, PyMongo <br>
+                            Autenticación: passlib, python-jose (JWT) <br>
+                            Frontend: Jinja2, HTML, CSS, JavaScript <br>
+                        </p>
+                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="" alt="Proyecto 2">
+                    <div class="project-info">
+                        <h3 class="technologies">Tasks list</h3>
+                        <p class="technologies">Task Application es una app de tareas con Node.js, Express y MySQL, que
+                            permite CRUD y seguimiento en tiempo real.</p>
+                        <p class="technologies">Backend: Node.js, Express <br>
+                            Base de datos: MySQL <br>
+                            Frontend: HTML, CSS, JavaScript</p>
+                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button id="prevBtn">◀</button>
+                <button id="nextBtn">▶</button>
+            </div>
+        </div>
+        <br>
+        <h1>My experience</h1>
+        <br>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="content">
+                    <p class="date">Abril - 2024 a Octubre - 2024</p>
+                    <p class="title">Aprendiz SENA </p>
+                    <p class="description">Trabajé en el desarrollo de APIs con FastAPI, integrando Elasticsearch para
+                        el almacenamiento y análisis de datos. Además, gestioné despliegues en AWS ECS y utilicé Kibana
+                        para la visualización de información. Todo esto lo desarrollé mientras formé parte del equipo de
+                        GRUPO ASD.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h1>Certificates</h1>
+        <br>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Proyecto 1">
+                    <div class="project-info">
+                        <h3 class="technologies">Proyecto 1</h3>
+                        <p class="technologies">Descripción breve del proyecto 1.</p>
+                        <p class="technologies">Tecnologías: HTML, CSS, JavaScript</p>
+                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Proyecto 2">
+                    <div class="project-info">
+                        <h3 class="technologies">Proyecto 2</h3>
+                        <p class="technologies">Descripción breve del proyecto 1.</p>
+                        <p class="technologies">Tecnologías: HTML, CSS, JavaScript</p>
+                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Proyecto 3">
+                    <div class="project-info">
+                        <h3 class="technologies">Proyecto 3</h3>
+                        <p class="technologies">Descripción breve del proyecto 1.</p>
+                        <p class="technologies">Tecnologías: HTML, CSS, JavaScript</p>
+                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button id="prevBtn">◀</button>
+                <button id="nextBtn">▶</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="../js/index.js"></script>
+
+</html>
