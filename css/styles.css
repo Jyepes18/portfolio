@@ -466,6 +466,21 @@ section h1 {
         text-align: left;
         padding-left: 20px;
     }
+
+    .carousel-certificates {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        background-color: #5d3a9b;
+    }
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
 }
 @media (max-width: 480px) {
     body {
