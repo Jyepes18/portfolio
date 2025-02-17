@@ -99,7 +99,9 @@ const translation = {
         "cer_trece": "Tecnólogo en Análisis y Desarrollo de Software",
         "ver_uno" : "Ver en GitHub",
         "ver_dos" : "Ver en GitHub",
-        "ver_tres" : "Ver en GitHub"
+        "ver_tres" : "Ver en GitHub",
+        "icon" : "Íconos diseñados por",
+        "icon_dos" : "Iconos de Freepik",
     },
 
     "en": {
@@ -112,7 +114,7 @@ const translation = {
         "me": "Backend Developer",
         "sentence": "If everything flows smoothly, it's because the backend is doing its job.",
         "meAbout": "About Me",
-        "presentation": "Hi, I’m Juan Pablo Yepes Herrera, a Technologist in Analysis and Software Development from Colombia. I worked as an apprentice at Grupo ASD through SENA (National Learning Service), a public institution in Colombia that provides technical education and training. During my apprenticeship, I collaborated on backend projects using Python and FastAPI. While my professional journey is just beginning, I am deeply passionate about API development and solving complex problems.",
+        "presentation": "Hi, I am Juan Pablo Yepes Herrera, a Technologist in Analysis and Software Development from Colombia. I am a developer who worked at Grupo ASD as an apprentice through SENA (National Learning Service), a public institution in Colombia that provides technical education and training. During my time there, I had the opportunity to collaborate on backend projects using Python and FastAPI. Although my professional experience is just starting, I have a strong passion for API development and solving complex problems.",
         "Skills": "Skills & Technologies",
         "Projects": "My Projects",
         "uno": "Blog Application is a blog app developed with FastAPI and MongoDB, allowing users to sign up, log in, create and manage posts, and update their personal profiles.",
@@ -138,7 +140,9 @@ const translation = {
         "cer_trece": "Technologist in Software Analysis and Development",
         "ver_uno" : "View on GitHub",
         "ver_dos" : "View on GitHub",
-        "ver_tres" : "View on GitHub"
+        "ver_tres" : "View on GitHub",
+        "icon" : "Icons designed by",
+        "icon_dos" : "Iconos by Freepik",
     }
 };
 
@@ -179,6 +183,8 @@ function changeLanguage(lang) {
     document.getElementById("ver_uno").innerText = translation[lang].ver_uno;
     document.getElementById("ver_dos").innerText = translation[lang].ver_dos;
     document.getElementById("ver_tres").innerText = translation[lang].ver_tres;
+    document.getElementById("icon").childNodes[0].nodeValue = translation[lang].icon + " ";
+    document.getElementById("icon_dos").childNodes[0].nodeValue = translation[lang].icon_dos + " ";
 };
 
 document.getElementById("copyEmail").addEventListener("click", function(event) {
@@ -190,7 +196,7 @@ document.getElementById("copyEmail").addEventListener("click", function(event) {
         Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "The email was copied successfully" + email,
+            title: "The email was copied successfully " + email,
             showConfirmButton: false,
             timer: 3000
         });
