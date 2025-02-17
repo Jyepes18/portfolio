@@ -19,13 +19,22 @@ nav {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 5px;
+    position: relative;
 }
 
 nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
 }
 
 nav ul li a {
@@ -39,6 +48,36 @@ nav ul li a:hover {
     background-color: #5d3a9b;
     border-radius: 50px;
     color: #f5e6ca;
+}
+
+nav ul li.img a {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+nav ul li.img a:hover {
+    background: none;
+}
+
+nav ul li.img img {
+    max-width: 30px;
+    height: auto;
+    display: block;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    
 }
 
 /* Header */
@@ -77,16 +116,17 @@ header h3 {
 article {
     background-color: #5d3a9b;
     color: #f5e6ca;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
 }
 
-article h1{
+article h1 {
     text-align: center;
 }
 
-article p{
+article p {
     max-width: 900px;
+    text-align: left;
     margin: auto;
 }
 
@@ -100,6 +140,10 @@ section h1 {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .row {
@@ -119,24 +163,54 @@ section h1 {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .icon img {
     width: 80px;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.1);
 }
 
 .icon span {
-    display: block;
+    position: absolute;
+    bottom: -30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
-    margin-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(10px);
+    border: 1px solid #5d3a9b;
+}
+
+.icon:hover span {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    background-color: #f5e6ca;
 }
 
 /* Carousel */
 .carousel-container {
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: auto;
     overflow: hidden;
 }
@@ -293,4 +367,114 @@ section h1 {
 .description {
     font-size: 14px;
     color: #555;
+}
+
+.carousel-certificates {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #5d3a9b;
+}
+
+.carousel-certi {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px;
+}
+
+.certificate-card {
+    flex: 0 0 30%;
+    text-align: center;
+}
+
+.certificate-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.certificate-info {
+    margin-top: 10px;
+}
+
+.title-card {
+    font-size: 14px;
+    color: #f5e6ca;
+    margin: 10px 0;
+}
+
+.nav-buttons-certificate {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.nav-buttons-certificate button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    pointer-events: auto;
+    transition: background 0.3s;
+}
+
+.nav-buttons-certificate button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul.show {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .technologias {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 10px;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    nav ul {
+        gap: 5px;
+    }
+    .btn {
+        padding: 6px 10px;
+    }
 }

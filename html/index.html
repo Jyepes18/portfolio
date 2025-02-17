@@ -7,50 +7,59 @@
     <title>Portfolio</title>
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 
     <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="">About Me</a></li>
-            <li><a href="">Skills & Technologies</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Professional Experience</a></li>
-            <li><a href="">Certifications</a></li>
-            <li><a href="">Technical Test</a></li>
+        <ul id="nav-list">
+            <li><a href="#header" id="about">About Me</a></li>
+            <li><a href="#Skills" id="skills">Skills & Technologies</a></li>
+            <li><a href="#Projects" id="projects">Projects</a></li>
+            <li><a href="#experience_My" id="experience">Professional Experience</a></li>
+            <li><a href="#Certificates_me" id="certificates">Certifications</a></li>
+            <li class="img"><a onclick="changeLanguage('en')"><img src="../img/ingles.ico" alt="English"></a></li>
+            <li class="img"><a onclick="changeLanguage('es')"><img src="../img/colombia.ico" alt="Español"></a></li>
         </ul>
+        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     </nav>
 
-    <header>
+    <header id="header">
         <div class="me">
             <img class="img-porfolio" src="../img/programmer.jpg" alt="Profile">
-            <h3>I am Juan Yepes</h3>
-            <h3>Backend Developer</h3>
-            <span>If everything flows smoothly, it's because the backend is doing its job.</span>
+            <h3 id="name">I am Juan Yepes</h3>
+            <h3 id="me">Backend Developer</h3>
+            <span id="sentence">If everything flows smoothly, it's because the backend is doing its job.</span>
             <div class="social-reds">
-                <a href=""><img src="../img/gamil.png" alt="Gmail"></a>
-                <a href=""><img src="../img/linkedin.png" alt="LinkedIn Profile"></a>
-                <a href=""><img src="../img/instagram.png" alt="Instagram Profile"></a>
+                <a href="#" id="copyEmail"><img src="../img/gamil.png" alt="Gmail"></a>
+                <a href="https://www.linkedin.com/in/juan-pablo-yepes-herrera-56a133191/"><img src="../img/linkedin.png"
+                        alt="LinkedIn Profile"></a>
+                <a href="../cv/CV Juan Pablo Yepes Herrera English.pdf" download="mi_cv.pdf">
+                    <img src="../img/cv.png" alt="Descargar CV">
+                </a>
+
             </div>
         </div>
     </header>
 
     <article id="about-me">
-        <h1>About Me</h1>
+        <h1 id="meAbout">About Me</h1>
         <br>
-        <p>Hi, I am Juan Pablo Yepes Herrera, a Technologist in Analysis and Software Development from Colombia.
+        <p id="presentation"> Hi, I am Juan Pablo Yepes Herrera, a Technologist in Analysis and Software Development
+            from Colombia.
             I am a developer who worked at Grupo ASD as an apprentice through SENA (National Learning Service),
             a public institution in Colombia that provides technical education and training. During my time there,
             I had the opportunity to collaborate on backend projects using Python and FastAPI.
             Although my professional experience is just starting, I have a strong passion for API development and
             solving complex problems.
         </p>
+        <br>
     </article>
 
     <section>
         <br>
-        <h1>Skills & Technologies</h1>
+        <h1 id="Skills">Skills & Technologies</h1>
         <div class="technologias">
             <div class="row">
                 <div class="category">
@@ -139,34 +148,50 @@
             </div>
         </div>
         <br>
-        <h2>Mis Proyectos</h2>
+        <h2 id="Projects">My Projects</h2>
         <br>
         <div class="carousel-container">
             <div class="carousel">
                 <div class="project-card">
-                    <img src="" alt="Proyecto 1">
                     <div class="project-info">
                         <h3 class="technologies">BLOG</h3>
-                        <p class="technologies">Blog Application es una aplicación de blog desarrollada con FastAPI y
-                            MongoDB que permite a los usuarios registrarse, iniciar sesión, crear y gestionar
-                            publicaciones, y administrar su perfil personal.</p>
+                        <p class="technologies" id="uno">Blog Application is a blog app developed with FastAPI and
+                            MongoDB,
+                            allowing users to sign up, log in, create and manage posts, and update their personal
+                            profiles.</p>
                         <p class="technologies">Backend: FastAPI, MongoDB, PyMongo <br>
-                            Autenticación: passlib, python-jose (JWT) <br>
+                            Authentication: passlib, python-jose (JWT) <br>
                             Frontend: Jinja2, HTML, CSS, JavaScript <br>
                         </p>
-                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                        <a href="https://github.com/Jyepes18/blog" class="btn" target="_blank" id="ver_uno">View on
+                            GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="" alt="Proyecto 2">
                     <div class="project-info">
-                        <h3 class="technologies">Tasks list</h3>
-                        <p class="technologies">Task Application es una app de tareas con Node.js, Express y MySQL, que
-                            permite CRUD y seguimiento en tiempo real.</p>
+                        <h3 class="technologies">Tasks List</h3>
+                        <p class="technologies" id="dos">Task Application is a task management app built with Node.js,
+                            Express,
+                            and MySQL, allowing CRUD operations and real-time tracking.</p>
                         <p class="technologies">Backend: Node.js, Express <br>
-                            Base de datos: MySQL <br>
+                            Database: MySQL <br>
                             Frontend: HTML, CSS, JavaScript</p>
-                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                        <a href="https://github.com/Jyepes18/tasks_list" class="btn" target="_blank" id="ver_dos">View
+                            on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3 class="technologies">Inventory API</h3>
+                        <p class="technologies" id="tres">It is an inventory system for products. It includes
+                            authentication and
+                            features an AI-powered tool to identify a product’s category.</p>
+                        <p class="technologies">
+                            Backend: Python, FastAPI <br>
+                            Database: MySQL <br>
+                        </p>
+                        <a href="https://github.com/Jyepes18/inventary" class="btn" target="_blank" id="ver_tres">View
+                            on GitHub</a>
                     </div>
                 </div>
             </div>
@@ -176,57 +201,130 @@
             </div>
         </div>
         <br>
-        <h1>My experience</h1>
+        <h1 id="experience_My">My experience</h1>
         <br>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="content">
-                    <p class="date">Abril - 2024 a Octubre - 2024</p>
-                    <p class="title">Aprendiz SENA </p>
-                    <p class="description">Trabajé en el desarrollo de APIs con FastAPI, integrando Elasticsearch para
-                        el almacenamiento y análisis de datos. Además, gestioné despliegues en AWS ECS y utilicé Kibana
-                        para la visualización de información. Todo esto lo desarrollé mientras formé parte del equipo de
-                        GRUPO ASD.</p>
+                    <p class="date" id="date">April 2024 - October 2024</p>
+                    <p class="title" id="title">SENA Apprentice</p>
+                    <p class="description" id="description">
+                        I worked on developing APIs with FastAPI, integrating Elasticsearch for data storage and
+                        analysis.
+                        Additionally, I managed deployments on AWS ECS and used Kibana for data visualization.
+                        All of this was developed while being part of the GRUPO ASD team.
+                    </p>
                 </div>
             </div>
         </div>
+
         <br>
-        <h1>Certificates</h1>
+        <h1 id="Certificates_me">Certificates</h1>
         <br>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Proyecto 1">
-                    <div class="project-info">
-                        <h3 class="technologies">Proyecto 1</h3>
-                        <p class="technologies">Descripción breve del proyecto 1.</p>
-                        <p class="technologies">Tecnologías: HTML, CSS, JavaScript</p>
-                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+        <div class="carousel-certificates">
+            <br>
+            <div class="carousel-certi">
+                <div class="certificate-card">
+                    <img src="../certificate/API.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_uno">Create an API with Node.js</h3>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Proyecto 2">
-                    <div class="project-info">
-                        <h3 class="technologies">Proyecto 2</h3>
-                        <p class="technologies">Descripción breve del proyecto 1.</p>
-                        <p class="technologies">Tecnologías: HTML, CSS, JavaScript</p>
-                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                <div class="certificate-card">
+                    <img src="../certificate/code_clean.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_dos">Clean Code</h3>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/400x200" alt="Proyecto 3">
-                    <div class="project-info">
-                        <h3 class="technologies">Proyecto 3</h3>
-                        <p class="technologies">Descripción breve del proyecto 1.</p>
-                        <p class="technologies">Tecnologías: HTML, CSS, JavaScript</p>
-                        <a href="https://github.com/usuario/proyecto1" class="btn" target="_blank">Ver en GitHub</a>
+                <div class="certificate-card">
+                    <img src="../certificate/contenido_digital.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_tres">Digital Content</h3>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="../certificate/Docker.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card">Docker</h3>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <img src="../certificate/Gestion_info.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_cuatro">Information Management</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/Git.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_cinco">Git from Noob to Pro</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/HTML-CSS.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_seis">Create Web Pages with HTML and CSS</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/Mongo.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_siete">NoSQL Databases with MongoDB and Node.js</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/node-js.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_ocho">Fundamentals of Programming with Node.js</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/PHP-SENA.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_nueve">Web development with PHP</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/PHP.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_diez">Everything about the web with PHP</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/salud_trabajo.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_once">Implementation of the Occupational Health and Safety
+                            Management System
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/Tecnico.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_doce">Software Development Technician</h3>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="../certificate/Tecnologo.jpg" alt="certificado">
+                    <div class="certificate-info">
+                        <h3 class="title-card" id="cer_trece">Technologist in Software Analysis and Development</h3>
                     </div>
                 </div>
             </div>
-            <div class="nav-buttons">
-                <button id="prevBtn">◀</button>
-                <button id="nextBtn">▶</button>
+            <div class="nav-buttons-certificate">
+                <button id="prevBtnCerti">◀</button>
+                <button id="nextBtnCerti">▶</button>
             </div>
+
         </div>
     </section>
 
