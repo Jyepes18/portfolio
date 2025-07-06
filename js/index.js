@@ -83,6 +83,9 @@ const translation = {
         "date": "Abril 2024 - Octubre 2024",
         "title": "Aprendiz SENA",
         "description": "Trabajé en el desarrollo de APIs con FastAPI, con integración en Elasticsearch para el almacenamiento de datos y análisis. Adicionalmente, realicé implementaciones con AWS ECS y usé Kibana para visualizar los datos. Todo esto fue desarrollado siendo parte del equipo de GRUPO ASD.",
+        "date2": "Marzo 2025 - Actualidad",
+        "title2": "Desarrollador Freelance",
+        "description2": "Estoy trabajando en una aplicación web usando C# con el Framework .NET. La aplicación es para una empresa del sector salud. Estoy haciendo una reestructuración del proyecto original para separar el backend del frontend. Estoy desarrollando ambas partes: el backend como una API, y el frontend también.",
         "Certificates_me": "Certificados",
         "cer_uno": "Crear una API con Node.js",
         "cer_dos": "Código Limpio",
@@ -124,6 +127,9 @@ const translation = {
         "date": "April 2024 - October 2024",
         "title": "SENA Apprentice",
         "description": "I worked on developing APIs with FastAPI, integrating Elasticsearch for data storage and analysis. Additionally, I managed deployments on AWS ECS and used Kibana for data visualization. All of this was developed while being part of the GRUPO ASD team.",
+        "date2": "March 2025 - Now",
+        "title2": "Freelance Developer",
+        "description2": "I am working on a web application using C# and the .NET Framework. The application is for a health company. I am refactoring the original project to separate the backend from the frontend. I am building both parts: the backend as an API, and the frontend as well.",
         "Certificates_me": "Certificates",
         "cer_uno": "Create an API with Node.js",
         "cer_dos": "Clean Code",
@@ -166,6 +172,9 @@ function changeLanguage(lang) {
     document.getElementById("date").innerText = translation[lang].date;
     document.getElementById("title").innerText = translation[lang].title;
     document.getElementById("description").innerText = translation[lang].description;
+    document.getElementById("date2").innerText = translation[lang].date2;
+    document.getElementById("title2").innerText = translation[lang].title2;
+    document.getElementById("description2").innerText = translation[lang].description2;
     document.getElementById("Certificates_me").innerText = translation[lang].Certificates_me;
     document.getElementById("cer_uno").innerText = translation[lang].cer_uno;
     document.getElementById("cer_dos").innerText = translation[lang].cer_dos;
